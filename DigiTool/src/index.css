@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@plugin "daisyui";
+*{
+  border: 1px solid black;
+}
+a{
+    text-decoration: none;
+}
+.linear-g-c {
+  background: linear-gradient(155deg, #4f39f6, #aa39f698);
+}
+.linear-g-c-text {
+  background: linear-gradient(155deg, #4f39f6, #aa39f6ee);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.navbar{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.line{
+  width: 1px;
+  height: 80px;
+  background: white;
+}
+.shadow{
+
+}
