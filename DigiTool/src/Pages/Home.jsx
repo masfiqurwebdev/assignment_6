@@ -5,7 +5,7 @@ import Navbar from "../Components/Navbar";
 import Products from "../Pages/Products"
 import SecoundProduct from "./SecoundProduct";
 import Bannar from "../Components/Bannar";
-import { Footer } from "./Footer";
+import Footer  from "./Footer";
 
 const Home = () => {
   return (
