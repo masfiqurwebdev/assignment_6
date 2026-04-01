@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
 *{
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 a{
     text-decoration: none;
@@ -25,5 +25,5 @@ a{
   background: white;
 }
 .shadow{
-
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.178) ;
 }
