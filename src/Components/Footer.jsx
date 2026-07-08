@@ -52,6 +52,8 @@
 // export default Footer
 
 
+import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
+
 
 const Footer = () => {
   return (
@@ -147,7 +149,26 @@ const Footer = () => {
             </h3>
 
             <div className="flex items-center gap-3">
-              <img src="../assets/" alt="" />
+<a
+                href="#"
+                className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-purple-600 hover:text-white transition"
+              >
+                <FaYoutube size={18} />
+              </a>
+
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-purple-600 hover:text-white transition"
+              >
+                <FaFacebook size={18} />
+              </a>
+
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-purple-600 hover:text-white transition"
+              >
+                <FaTwitter size={18} />
+              </a>
             </div>
           </div>
         </div>
