@@ -7,12 +7,10 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        {/* Logo */}
         <a href="/" className="text-3xl font-bold text-[#6C3BFF]">
           DigiTools
         </a>
 
-        {/* Desktop Menu */}
         <div className="hidden items-center gap-8 lg:flex">
           <a href="#" className="text-sm font-medium hover:text-[#6C3BFF]">
             Products
