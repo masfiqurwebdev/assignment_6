@@ -2,15 +2,18 @@
 
 const stats = [
   {
+    
     number: "50K+",
     title: "Active Users",
   },
   {
     number: "200+",
     title: "Premium Tools",
+
   },
   {
     number: "4.9",
+
     title: "Rating",
   },
 ];
@@ -18,7 +21,7 @@ const stats = [
 
 const Banner = () => {
   return (
-        <section className="py-12 w-[100vw]">
+      <section className="py-12 w-[100vw]">
       <div className=" px-6">
         <div className="rounded-md bg-gradient-to-r from-[#4F2DFF] via-[#7B2EFF] to-[#B21EFF] py-10 text-white shadow-lg">
           <div className="grid grid-cols-1 divide-y divide-white/20 md:grid-cols-3 md:divide-x md:divide-y-0">

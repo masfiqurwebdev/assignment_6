@@ -57,8 +57,8 @@ const Packages = () => {
   return (
     
     <section className="bg-white py-20">
+      
       <div className="mx-auto max-w-7xl px-6">
-        {/* Heading */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-gray-900">
             Simple, Transparent Pricing
@@ -69,25 +69,24 @@ const Packages = () => {
           </p>
         </div>
 
-        {/* Pricing Cards */}
         <div className="mt-16 grid gap-8 lg:grid-cols-3">
           {plans.map((plan) => (
             <div
               key={plan.name}
+
               className={`relative rounded-2xl border p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl ${
                 plan.featured
                   ? "border-transparent bg-gradient-to-br from-[#5D2EFF] via-[#7A2BFF] to-[#A61DFF] text-white"
                   : "border-gray-200 bg-white"
               }`}
             >
-              {/* Badge */}
               {plan.badge && (
                 <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full bg-yellow-300 px-3 py-1 text-xs font-semibold text-gray-900">
                   {plan.badge}
+
                 </span>
               )}
 
-              {/* Plan */}
               <h3 className="text-2xl font-bold">{plan.name}</h3>
 
               <p
@@ -96,9 +95,9 @@ const Packages = () => {
                 }`}
               >
                 {plan.subtitle}
+
               </p>
 
-              {/* Price */}
               <div className="mt-6 flex items-end">
                 <span className="text-5xl font-bold">{plan.price}</span>
                 <span
@@ -107,10 +106,11 @@ const Packages = () => {
                   }`}
                 >
                   {plan.duration}
+
                 </span>
               </div>
 
-              {/* Features */}
+
               <ul className="mt-8 space-y-4">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-3">
@@ -126,6 +126,7 @@ const Packages = () => {
                       className={
                         plan.featured ? "text-white" : "text-gray-600"
                       }
+
                     >
                       {feature}
                     </span>
@@ -133,14 +134,15 @@ const Packages = () => {
                 ))}
               </ul>
 
-              {/* Button */}
               <button
+
                 className={`mt-10 w-full rounded-full py-3 font-semibold transition ${
                   plan.featured
                     ? "bg-white text-[#6C3BFF] hover:bg-gray-100"
                     : "bg-gradient-to-r from-[#5D2EFF] to-[#A61DFF] text-white hover:opacity-90"
                 }`}
               >
+
                 {plan.button}
               </button>
             </div>

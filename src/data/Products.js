@@ -1,9 +1,11 @@
+
 export const products = [
   {
     id: 1,
     title: "AI Writing Pro",
+    description: 'Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.',
     price: 29,
-    category: "Popular",
+    category: "Best Seller",
     color: "bg-purple-100",
     icon: "📝",
     features: [
@@ -15,6 +17,7 @@ export const products = [
   {
     id: 2,
     title: "Design Templates Pack",
+    description: '2000+ premium templates for social media, presentations, and marketing materials.',
     price: 49,
     category: "Popular",
     color: "bg-orange-100",
@@ -28,10 +31,11 @@ export const products = [
   {
     id: 3,
     title: "Premium Stock Assets",
+    description: 'Access millions of royalty-free photos, videos, and graphics for your projects.',
     price: 19,
     category: "New",
     color: "bg-blue-100",
-    icon: "☁️",
+    icon: "📷",
     features: [
       "Unlimited Download",
       "4K Images",
@@ -41,6 +45,7 @@ export const products = [
   {
     id: 4,
     title: "Automation Toolkit",
+    description: 'Automate repetitive tasks and streamline your workflow with powerful tools.',
     price: 79,
     category: "Popular",
     color: "bg-green-100",
@@ -54,6 +59,7 @@ export const products = [
   {
     id: 5,
     title: "Resume Builder Pro",
+    description: 'Create professional resumes and cover letters that land interviews.',
     price: 15,
     category: "New",
     color: "bg-yellow-100",
@@ -67,8 +73,9 @@ export const products = [
   {
     id: 6,
     title: "Social Media Content Kit",
+    description: 'Complete toolkit for creating engaging social media content across all platforms.',
     price: 39,
-    category: "Popular",
+    category: "Best Seller",
     color: "bg-pink-100",
     icon: "📱",
     features: [
