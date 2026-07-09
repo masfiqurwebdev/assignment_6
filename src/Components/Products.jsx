@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { products } from "../data/products";
-import { ShoppingCart, Check, Trash2 } from "lucide-react";
+import { ShoppingCart, Check } from "lucide-react";
+import toast from "react-hot-toast";
 
 export default function ProductCart() {
   const [activeTab, setActiveTab] = useState("products");
@@ -14,6 +15,16 @@ export default function ProductCart() {
     setCart([...cart, product]);
   };
 
+  const handleCheckout = () => {
+    if (cart.length === 0) {
+      toast.error("Your cart is empty!");
+      return;
+    }
+
+    toast.success("🎉 Order placed successfully!");
+
+    setCart([]);
+  };
   const removeItem = (id) => {
     setCart(cart.filter((item) => item.id !== id));
   };
@@ -62,17 +73,23 @@ export default function ProductCart() {
               key={product.id}
               className="border rounded-xl p-6 hover:shadow-lg duration-300"
             >
-            <div className="flex justify-between">
-              <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl ${product.color}`}>
-                {product.icon}
+              <div className="flex justify-between">
+                <div
+                  className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl ${product.color}`}
+                >
+                  {product.icon}
+                </div>
+                <h3 className={`text-lg font-bold rounded-full`}>
+                  {product.category}
+                </h3>
               </div>
-              <h3 className= {`text-lg font-bold rounded-full`}>{product.category}</h3>
-            </div>
 
               <h3 className="font-bold mt-4 text-lg mb-3">{product.title}</h3>
               <div>{product.description}</div>
 
-              <p className="text-3xl font-bold mt-3">${product.price} <span className="text-xs">/Mo</span></p>
+              <p className="text-3xl font-bold mt-3">
+                ${product.price} <span className="text-xs">/Mo</span>
+              </p>
 
               <ul className="space-y-2 mt-5">
                 {product.features.map((item) => (
@@ -86,7 +103,7 @@ export default function ProductCart() {
                 ))}
               </ul>
 
-              <button 
+              <button
                 onClick={() => addToCart(product)}
                 disabled={cart.some((item) => item.id === product.id)}
                 className={`mt-6 w-full py-3 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 ${
@@ -98,7 +115,7 @@ export default function ProductCart() {
                 <ShoppingCart size={18} />
 
                 {cart.some((item) => item.id === product.id)
-                  ? "Product Added "
+                  ? "Added to cart"
                   : "Buy Now"}
               </button>
             </div>
@@ -115,13 +132,17 @@ export default function ProductCart() {
               <h3 className="text-xl mt-5">Your cart is empty</h3>
 
               <button
-                onClick={() => setActiveTab("products")} className="mt-5 bg-purple-600 cursor-pointer text-white px-6 py-3 rounded-lg">Browse Products</button>
+                onClick={() => setActiveTab("products")}
+                className="mt-5 bg-purple-600 cursor-pointer text-white px-6 py-3 rounded-lg"
+              >
+                Browse Products
+              </button>
             </div>
           ) : (
             <>
               <div className="space-y-4">
                 {cart.map((item) => (
-                  <div 
+                  <div
                     key={item.id}
                     className="flex justify-between items-center border rounded-lg p-4"
                   >
@@ -155,7 +176,10 @@ export default function ProductCart() {
                 <span>${total}</span>
               </div>
 
-              <button className="w-full mt-6 cursor-pointer bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg">
+              <button
+                onClick={handleCheckout}
+                className="w-full mt-6 bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:opacity-90 text-white py-3 rounded-full font-semibold transition"
+              >
                 Proceed to Checkout
               </button>
             </>
