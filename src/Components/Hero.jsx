@@ -27,9 +27,9 @@ const Hero = () => {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <button className="rounded-full bg-[#6C3BFF] px-7 py-3 font-semibold text-white transition hover:bg-[#5B2FF7]">
+            <a href="./../Pages/Product.jsx" className="rounded-full bg-[#6C3BFF] px-7 py-3 font-semibold text-white transition hover:bg-[#5B2FF7]">
               Explore Products
-            </button>
+            </a>
 
             <button className="flex items-center gap-2 rounded-full border border-[#6C3BFF] px-7 py-3 font-semibold text-[#6C3BFF] transition hover:bg-[#6C3BFF] hover:text-white">
               <Play size={16} fill="currentColor" />
